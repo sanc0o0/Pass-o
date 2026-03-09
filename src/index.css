@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    background-image:
+      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+    background-size: 6rem 4rem;
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent);
+    pointer-events: none;
+  }
